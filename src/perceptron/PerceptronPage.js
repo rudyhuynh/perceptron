@@ -86,11 +86,11 @@ export default class PerceptronPage extends React.Component{
     if (b === 0){
       // x = -c/a
       if (-c/a < 0 || -c/a > maxWidth) return
-      return <line x1={-c/a} y1={0} x2={-c/a} y2={maxHeight} stroke="black" stroke-width="0.5"/>
+      return <line x1={-c/a} y1={0} x2={-c/a} y2={maxHeight} stroke="black"/>
     }else{
       //x = 0 => y = -c/b
       //if (-c/b < 0 || -c/b > 500) return
-      return <line x1={0} y1={-c/b} x2={maxWidth} y2={(-c-a*maxWidth)/b} stroke="black" stroke-width="0.5"/>
+      return <line x1={0} y1={-c/b} x2={maxWidth} y2={(-c-a*maxWidth)/b} stroke="black"/>
     }
   }
   render(){

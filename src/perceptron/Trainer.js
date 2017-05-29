@@ -54,8 +54,14 @@ export default class Trainer{
   }
 
   generateTrainingItem(maxWidth, maxHeight){
-    const x = Math.random() * maxWidth,
+    let x, y, d = 0;
+
+    while (d < 2){
+      x = Math.random() * maxWidth
       y = Math.random() * maxHeight
+      d = Math.abs(this.f(x, y)) / Math.sqrt(2)  
+    }
+
     return {
       inputs: [x, y, 1],
       desiredNegative: this.f(x, y) < 0
